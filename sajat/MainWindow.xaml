@@ -1,0 +1,32 @@
+﻿<Window x:Class="sajat.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:sajat"
+        mc:Ignorable="d"
+        Title="Színek" Height="450" Width="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+            <Slider x:Name="slider" VerticalAlignment="Center" Width="100" Minimum="0" Maximum="100" Value="70"/>
+            <Label VerticalAlignment="Center" Content="Szin:"/>
+            <ComboBox x:Name="comboBox" Width="100" Height="20" SelectedIndex="0">
+                <ComboBoxItem Content="Piros"/>
+                <ComboBoxItem Content="Zöld"/>
+                <ComboBoxItem Content="Kék"/>
+            </ComboBox>
+            <Button x:Name="hozzaadas" Content="Hozzáadás" Width="100" Height="20" Margin="10" Click="Button_Click"/>
+        </StackPanel>
+        <DataGrid x:Name="dataGrid" Grid.Row="1" Margin="10"/>
+        <StackPanel Grid.Row="2">
+            <Button Content="Törlés" Width="100" Margin="10" Click="torles"/>
+            <Button Content="Kilépés" Width="100" Margin="10" Click="kilepes"/>
+
+        </StackPanel>
+    </Grid>
+</Window>
